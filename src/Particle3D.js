@@ -108,7 +108,9 @@ export default function Particle3D(props){
 
 
             //TODO (optional): filter out particles below 80% of the maximum concentration here
-
+            let maxConcentration = d3.max(props.data.map(item => item.concentration))
+            let reqConcentration = props.data.filter((obj) => obj.concentration < 0.8* maxConcentration)
+            console.log("Particle 3D : ", reqConcentration)
 
             //get positions for particle positions
             //THREE.js buffer attributes uses a 1d vector of length n_items x item_dimensions
