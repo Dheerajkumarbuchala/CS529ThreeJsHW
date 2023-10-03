@@ -49,6 +49,8 @@ function makeVelocityConcentrationGlyph(d, axis, scale=1){
     let path2 = 'M ' + xpos + ',' + ypos + ' '
         + 'A ' + x + ',' + y + ' 0 1,1 ' + xpos + ',' + (ypos + 0.01) + 'Z';
 
+    //return path;
+    //return path2;
     return path + path2;
 }
 
